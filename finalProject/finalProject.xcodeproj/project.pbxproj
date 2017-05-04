@@ -431,6 +431,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = edu.binghamton.tjain3.finalProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -444,6 +445,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = edu.binghamton.tjain3.finalProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -524,6 +526,7 @@
 				17524BD01E7A4037008CAA78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		17524BD11E7A4037008CAA78 /* Build configuration list for PBXNativeTarget "finalProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +535,7 @@
 				17524BD31E7A4037008CAA78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		17524BD41E7A4037008CAA78 /* Build configuration list for PBXNativeTarget "finalProjectUITests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +544,7 @@
 				17524BD61E7A4037008CAA78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -12,6 +12,7 @@ import GameplayKit
 
 class GameViewController: UIViewController {
 
+    @IBOutlet var columnButtons: [UIButton]!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,6 +50,8 @@ class GameViewController: UIViewController {
         // Release any cached data, images, etc that aren't in use.
     }
 
+    @IBAction func makeMove(_ sender: UIButton) {
+    }
     override var prefersStatusBarHidden: Bool {
         return true
     }

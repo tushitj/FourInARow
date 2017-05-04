@@ -43,10 +43,10 @@
             </objects>
             <point key="canvasLocation" x="-1294" y="210"/>
         </scene>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="ICD-pA-FIW">
             <objects>
-                <viewController id="tDL-PW-qKS" sceneMemberID="viewController">
+                <viewController id="tDL-PW-qKS" customClass="GameViewController" customModule="finalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="N6h-0S-YQU"/>
                         <viewControllerLayoutGuide type="bottom" id="mgK-WB-bev"/>
@@ -61,30 +61,51 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJc-Dd-7BZ">
                                         <rect key="frame" x="0.0" y="0.0" width="52" height="667"/>
                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <connections>
+                                            <action selector="makeMove:" destination="tDL-PW-qKS" eventType="touchUpInside" id="gEV-0d-hG3"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YcR-cc-62t">
                                         <rect key="frame" x="54" y="0.0" width="51.5" height="667"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="makeMove:" destination="tDL-PW-qKS" eventType="touchUpInside" id="Wir-ZX-ZHT"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="goe-nm-FRP">
                                         <rect key="frame" x="107.5" y="0.0" width="52" height="667"/>
                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <connections>
+                                            <action selector="makeMove:" destination="tDL-PW-qKS" eventType="touchUpInside" id="duq-wW-hDJ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWR-8Y-e7b">
                                         <rect key="frame" x="161.5" y="0.0" width="52" height="667"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="makeMove:" destination="tDL-PW-qKS" eventType="touchUpInside" id="4uc-Bv-nwn"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KbK-IB-qHL">
                                         <rect key="frame" x="215.5" y="0.0" width="52" height="667"/>
                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <connections>
+                                            <action selector="makeMove:" destination="tDL-PW-qKS" eventType="touchUpInside" id="4Kn-fc-Du4"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x1d-V1-wLZ">
                                         <rect key="frame" x="269.5" y="0.0" width="51.5" height="667"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="makeMove:" destination="tDL-PW-qKS" eventType="touchUpInside" id="jW5-vP-n1h"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJz-Fj-kAc">
                                         <rect key="frame" x="323" y="0.0" width="52" height="667"/>
                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <connections>
+                                            <action selector="makeMove:" destination="tDL-PW-qKS" eventType="touchUpInside" id="IEZ-Ft-qoX"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -98,6 +119,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pCI-em-gfN"/>
+                    <connections>
+                        <outletCollection property="columnButtons" destination="qJc-Dd-7BZ" collectionClass="NSMutableArray" id="7en-oN-WU3"/>
+                        <outletCollection property="columnButtons" destination="YcR-cc-62t" collectionClass="NSMutableArray" id="eIl-Bp-GQh"/>
+                        <outletCollection property="columnButtons" destination="goe-nm-FRP" collectionClass="NSMutableArray" id="WvH-0a-o56"/>
+                        <outletCollection property="columnButtons" destination="lWR-8Y-e7b" collectionClass="NSMutableArray" id="suU-xt-DjK"/>
+                        <outletCollection property="columnButtons" destination="KbK-IB-qHL" collectionClass="NSMutableArray" id="o2Z-F7-0m4"/>
+                        <outletCollection property="columnButtons" destination="x1d-V1-wLZ" collectionClass="NSMutableArray" id="njm-GK-jwz"/>
+                        <outletCollection property="columnButtons" destination="KJz-Fj-kAc" collectionClass="NSMutableArray" id="TAI-ij-wQS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r6Z-9U-aaH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

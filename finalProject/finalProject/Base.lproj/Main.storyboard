@@ -12,7 +12,6 @@
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
                 <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="finalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
@@ -24,70 +23,85 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2842" y="-531"/>
-        </scene>
-        <!--Root View Controller-->
-        <scene sceneID="oLm-ec-A12">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Fyp-Es-Hci" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="23w-x0-aYM" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="hFF-cV-Wur">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <stackView key="tableFooterView" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" id="IED-vr-YbL">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="605"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67D-OY-zMR">
-                                    <rect key="frame" x="0.0" y="0.0" width="52" height="605"/>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCa-D0-Uio">
-                                    <rect key="frame" x="54" y="0.0" width="51.5" height="605"/>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBH-KP-YXu">
-                                    <rect key="frame" x="107.5" y="0.0" width="52" height="605"/>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Epv-FQ-ARp">
-                                    <rect key="frame" x="161.5" y="0.0" width="52" height="605"/>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNG-3m-QOD">
-                                    <rect key="frame" x="215.5" y="0.0" width="52" height="605"/>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWO-S0-BrJ">
-                                    <rect key="frame" x="269.5" y="0.0" width="51.5" height="605"/>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9oT-mj-f4C">
-                                    <rect key="frame" x="323" y="0.0" width="52" height="605"/>
-                                </button>
-                            </subviews>
-                        </stackView>
-                        <connections>
-                            <outlet property="dataSource" destination="23w-x0-aYM" id="e9C-Ow-ehI"/>
-                            <outlet property="delegate" destination="23w-x0-aYM" id="a2b-7O-bSE"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="40J-7l-Mca"/>
-                </tableViewController>
-            </objects>
-            <point key="canvasLocation" x="-343.19999999999999" y="209.14542728635683"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xUh-XC-JM8">
             <objects>
                 <navigationController id="2Wj-8b-Urf" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="rsY-gL-5Ld">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rsY-gL-5Ld">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="23w-x0-aYM" kind="relationship" relationship="rootViewController" id="9JE-2r-zCz"/>
+                        <segue destination="tDL-PW-qKS" kind="relationship" relationship="rootViewController" id="nOe-iw-I4D"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vyd-a4-6hQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1294" y="210"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ICD-pA-FIW">
+            <objects>
+                <viewController id="tDL-PW-qKS" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="N6h-0S-YQU"/>
+                        <viewControllerLayoutGuide type="bottom" id="mgK-WB-bev"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eCI-pG-bWE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="cBo-Qn-D9J">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJc-Dd-7BZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="52" height="667"/>
+                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YcR-cc-62t">
+                                        <rect key="frame" x="54" y="0.0" width="51.5" height="667"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="goe-nm-FRP">
+                                        <rect key="frame" x="107.5" y="0.0" width="52" height="667"/>
+                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWR-8Y-e7b">
+                                        <rect key="frame" x="161.5" y="0.0" width="52" height="667"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KbK-IB-qHL">
+                                        <rect key="frame" x="215.5" y="0.0" width="52" height="667"/>
+                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x1d-V1-wLZ">
+                                        <rect key="frame" x="269.5" y="0.0" width="51.5" height="667"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </button>
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJz-Fj-kAc">
+                                        <rect key="frame" x="323" y="0.0" width="52" height="667"/>
+                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cBo-Qn-D9J" firstAttribute="top" secondItem="eCI-pG-bWE" secondAttribute="top" id="ECj-s1-mpn"/>
+                            <constraint firstAttribute="trailing" secondItem="cBo-Qn-D9J" secondAttribute="trailing" id="aFa-0P-xcZ"/>
+                            <constraint firstItem="cBo-Qn-D9J" firstAttribute="leading" secondItem="eCI-pG-bWE" secondAttribute="leading" id="fbT-1t-OnL"/>
+                            <constraint firstItem="cBo-Qn-D9J" firstAttribute="bottom" secondItem="mgK-WB-bev" secondAttribute="top" id="xwL-HL-mhf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="pCI-em-gfN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r6Z-9U-aaH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-210.40000000000001" y="210.94452773613196"/>
         </scene>
     </scenes>
 </document>

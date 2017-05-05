@@ -51,4 +51,9 @@ class Board: NSObject {
         return nextEmptySlot(in: column) != nil
     }
 
+    func add(chip: ChipColor, in column: Int) {
+        if let row = nextEmptySlot(in: column) {
+            set(chip: chip, in: column, row: row)
+        }
+    }
 }

@@ -11,28 +11,31 @@ import SpriteKit
 import GameplayKit
 
 class GameViewController: UIViewController {
-
+    var placedChips = [[UIView]]()
+    var board: Board!
     @IBOutlet var columnButtons: [UIButton]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if let view = self.view as! SKView? {
-            // Load the SKScene from 'GameScene.sks'
-            if let scene = SKScene(fileNamed: "GameScene") {
-                // Set the scale mode to scale to fit the window
-                scene.scaleMode = .aspectFill
-                
-                // Present the scene
-                view.presentScene(scene)
-            }
-            
-            view.ignoresSiblingOrder = true
-            
-            view.showsFPS = true
-            view.showsNodeCount = true
+        for _ in 0 ..< Board.width {
+            placedChips.append([UIView]())
         }
+        
+        resetBoard()
     }
 
+    func resetBoard() {
+        board = Board()
+        
+        for i in 0 ..< placedChips.count {
+            for chip in placedChips[i] {
+                chip.removeFromSuperview()
+            }
+            
+            placedChips[i].removeAll(keepingCapacity: true)
+        }
+    }
+    
     override var shouldAutorotate: Bool {
         return true
     }

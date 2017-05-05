@@ -54,6 +54,12 @@ class GameViewController: UIViewController {
     }
 
     @IBAction func makeMove(_ sender: UIButton) {
+        let column = sender.tag
+        
+        if let row = board.nextEmptySlot(in: column) {
+            board.add(chip: .red, in: column)
+            addChip(inColumn: column, row: row, color: .red)
+        }
     }
     
     
@@ -78,6 +84,16 @@ class GameViewController: UIViewController {
             
             placedChips[column].append(newChip)
         }
+    }
+    
+    func positionForChip(inColumn column: Int, row: Int) -> CGPoint {
+        let button = columnButtons[column]
+        let size = min(button.frame.width, button.frame.height / 6)
+        
+        let xOffset = button.frame.midX
+        var yOffset = button.frame.maxY - size / 2
+        yOffset -= size * CGFloat(row)
+        return CGPoint(x: xOffset, y: yOffset)
     }
     override var prefersStatusBarHidden: Bool {
         return true

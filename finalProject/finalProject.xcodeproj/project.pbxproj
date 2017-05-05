@@ -14,6 +14,7 @@
 		17524BB41E7A4036008CAA78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17524BB21E7A4036008CAA78 /* LaunchScreen.storyboard */; };
 		17524BBF1E7A4037008CAA78 /* finalProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17524BBE1E7A4037008CAA78 /* finalProjectTests.swift */; };
 		17524BCA1E7A4037008CAA78 /* finalProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17524BC91E7A4037008CAA78 /* finalProjectUITests.swift */; };
+		17A159811EBD46A1000F19A1 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A159801EBD46A1000F19A1 /* Player.swift */; };
 		17AC78561EBC5296007D2D5B /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AC78551EBC5296007D2D5B /* Board.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		17524BC51E7A4037008CAA78 /* finalProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = finalProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17524BC91E7A4037008CAA78 /* finalProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finalProjectUITests.swift; sourceTree = "<group>"; };
 		17524BCB1E7A4037008CAA78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17A159801EBD46A1000F19A1 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		17AC78551EBC5296007D2D5B /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +108,7 @@
 				17524BB21E7A4036008CAA78 /* LaunchScreen.storyboard */,
 				17524BB51E7A4036008CAA78 /* Info.plist */,
 				17AC78551EBC5296007D2D5B /* Board.swift */,
+				17A159801EBD46A1000F19A1 /* Player.swift */,
 			);
 			path = finalProject;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17A159811EBD46A1000F19A1 /* Player.swift in Sources */,
 				17524BAC1E7A4036008CAA78 /* GameViewController.swift in Sources */,
 				17AC78561EBC5296007D2D5B /* Board.swift in Sources */,
 				17524BA41E7A4036008CAA78 /* AppDelegate.swift in Sources */,

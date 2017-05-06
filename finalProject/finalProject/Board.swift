@@ -17,7 +17,7 @@ enum ChipColor: Int {
 
 
 
-class Board: NSObject {
+class Board: NSObject, GKGameModel {
     static var width = 7
     static var height = 6
     
@@ -86,6 +86,64 @@ class Board: NSObject {
         }
         
         return false
+    }
+    
+    func copy(with zone: NSZone? = nil) -> Any {
+        let copy = Board()
+        copy.setGameModel(self)
+        return copy
+    }
+    
+    func setGameModel(_ gameModel: GKGameModel) {
+        if let board = gameModel as? Board {
+            slots = board.slots
+            currentPlayer = board.currentPlayer
+        }
+    }
+    
+    func gameModelUpdates(for player: GKGameModelPlayer) -> [GKGameModelUpdate]? {
+        // 1
+        if let playerObject = player as? Player {
+            // 2
+            if isWin(for: playerObject) || isWin(for: playerObject.opponent) {
+                return nil
+            }
+            
+            // 3
+            var moves = [Move]()
+            
+            // 4
+            for column in 0 ..< Board.width {
+                if canMove(in: column) {
+                    // 5
+                    moves.append(Move(column: column))
+                }
+            }
+            
+            // 6
+            return moves
+        }
+        
+        return nil
+    }
+    
+    func apply(_ gameModelUpdate: GKGameModelUpdate) {
+        if let move = gameModelUpdate as? Move {
+            add(chip: currentPlayer.chip, in: move.column)
+            currentPlayer = currentPlayer.opponent
+        }
+    }
+    
+    func score(for player: GKGameModelPlayer) -> Int {
+        if let playerObject = player as? Player {
+            if isWin(for: playerObject) {
+                return 1000
+            } else if isWin(for: playerObject.opponent) {
+                return -1000
+            }
+        }
+        
+        return 0
     }
     
     func squaresMatch(initialChip: ChipColor, row: Int, col: Int, moveX: Int, moveY: Int) -> Bool {

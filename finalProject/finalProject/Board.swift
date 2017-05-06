@@ -27,7 +27,7 @@ class Board: NSObject {
         for _ in 0 ..< Board.width * Board.height {
             slots.append(.none)
         }
-        
+        currentPlayer = Player.allPlayers[0]
         super.init()
     }
     func chip(inColumn column: Int, row: Int) -> ChipColor {

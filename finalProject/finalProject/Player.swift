@@ -31,4 +31,16 @@ class Player: NSObject,GKGameModelPlayer {
         
         super.init()
     }
+    
+    var opponent: Player {
+        if chip == .red {
+            return Player.allPlayers[1]
+        } else {
+            return Player.allPlayers[0]
+        }
+    }
+    
+  
+    
+   
 }

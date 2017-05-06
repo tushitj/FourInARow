@@ -98,4 +98,36 @@ class GameViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return true
     }
+    func updateUI() {
+        title = "\(board.currentPlayer.name)'s Turn"
+    }
+    
+    func continueGame() {
+        // 1
+        var gameOverTitle: String? = nil
+        
+        // 2
+        if board.isWin(for: board.currentPlayer) {
+            gameOverTitle = "\(board.currentPlayer.name) Wins!"
+        } else if board.isFull() {
+            gameOverTitle = "Draw!"
+        }
+        
+        // 3
+        if gameOverTitle != nil {
+            let alert = UIAlertController(title: gameOverTitle, message: nil, preferredStyle: .alert)
+            let alertAction = UIAlertAction(title: "Play Again", style: .default) { [unowned self] (action) in
+                self.resetBoard()
+            }
+            
+            alert.addAction(alertAction)
+            present(alert, animated: true)
+            
+            return
+        }
+        
+        // 4
+        board.currentPlayer = board.currentPlayer.opponent
+        updateUI()
+    }
 }

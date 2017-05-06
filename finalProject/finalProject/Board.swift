@@ -23,6 +23,8 @@ class Board: NSObject, GKGameModel {
     
     var currentPlayer: Player
     var slots = [ChipColor]()
+    var players: [GKGameModelPlayer]?
+    var activePlayer: GKGameModelPlayer?
     
     override init() {
         for _ in 0 ..< Board.width * Board.height {

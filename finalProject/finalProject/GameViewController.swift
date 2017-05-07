@@ -58,6 +58,8 @@ class GameViewController: UIViewController {
         return nil
     }
     func makeAIMove(in column: Int) {
+        columnButtons.forEach { $0.isEnabled = true }
+        navigationItem.leftBarButtonItem = nil
         if let row = board.nextEmptySlot(in: column) {
             board.add(chip: board.currentPlayer.chip, in: column)
             addChip(inColumn: column, row:row, color: board.currentPlayer.color)
@@ -67,6 +69,12 @@ class GameViewController: UIViewController {
     }
     
     func startAIMove() {
+        columnButtons.forEach { $0.isEnabled = false }
+        
+        let spinner = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        spinner.startAnimating()
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: spinner)
         DispatchQueue.global().async { [unowned self] in
             let strategistTime = CFAbsoluteTimeGetCurrent()
             let column = self.columnForAIMove()!
@@ -142,6 +150,10 @@ class GameViewController: UIViewController {
     }
     func updateUI() {
         title = "\(board.currentPlayer.name)'s Turn"
+        
+        if board.currentPlayer.chip == .black {
+            startAIMove()
+        }
     }
     
     func continueGame() {
